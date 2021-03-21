@@ -1,0 +1,36 @@
+/*
+ * @author Abhi pAtel
+ * Studnt id - 40978822
+ * Lab3- STL Solid
+ */
+//Facet Class
+public class Facet {
+
+	private Vertex normal;
+	private Vertex v1, v2, v3;
+
+	//Parameterized constructor of Solid class
+	public Facet(Vertex v1, Vertex v2, Vertex v3) {
+		this.v1 = v1;
+		this.v2 = v2;
+		this.v3 = v3;
+
+		normal = Vertex.calcNormal(v1, v2, v3);
+	}
+
+	@Override
+	public String toString() {
+		
+		System.out.println("facet normal " + normal);
+		System.out.println(" outer loop");
+		System.out.println("  vertex " + v1);
+		System.out.println("  vertex " + v2);
+		System.out.println("  vertex " + v3);
+		/*
+		System.out.println(" endloop");
+		System.out.println("endfacet");
+		*/
+		return   " endloop/nendfacet";
+	}
+
+}

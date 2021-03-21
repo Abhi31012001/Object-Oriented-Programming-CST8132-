@@ -1,0 +1,31 @@
+
+public class AffineTransform {
+
+	public String getName() {
+		return this.getName();
+	}
+
+	public double[][] getAffine() {
+		return this.getAffine();
+	}
+
+	public double getScale() {
+		return this.getScale();
+	}
+
+	public int getHeight() {
+		return getHeight();
+	}
+
+	public int getWidth() {
+		return this.getWidth();
+	}
+
+	public int getXoffset() {
+		return this.getXoffset();
+	}
+
+	public int getYoffset() {
+		return this.getYoffset();
+	}
+}

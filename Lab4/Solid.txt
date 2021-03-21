@@ -1,0 +1,45 @@
+
+// import statement
+import java.util.ArrayList;
+
+/*
+ * @author Abhi Patel
+ * Student id - 40978822
+ * Lab3- STL Solid
+ */
+
+//Solid class
+public class Solid {
+
+	private String name;
+	private ArrayList<Facet> facets = new ArrayList<Facet>();
+
+	//Default constructor of Solid class
+	public Solid() {
+		name = null;
+	}
+
+	//Parameterized constructor of Solid class
+	public Solid(String name) {
+		this.name = name;
+
+	}
+
+	//methods
+	public boolean addFacet(Facet facet) {
+
+		if (facets.add(facet))
+			return true;
+
+		else
+			return false;
+	}
+
+	public String toString() {
+		String details = "endsolid " + this.name + "\n";
+		System.out.println("solid " + this.name);
+		facets.toString();
+		return details;
+	}
+
+}

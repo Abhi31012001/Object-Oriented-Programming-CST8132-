@@ -1,0 +1,45 @@
+
+public class Sierpinskilfs extends AffineTransform {
+
+	private double[][] affine = { { 0.50, 0.00, 0.00, 0.50, 0.00, 0.00, 0.33 },
+			{ 0.50, 0.00, 0.00, 0.50, 0.00, -0.50, 0.33 }, { 0.50, 0.00, 0.00, 0.50, -0.43, -0.25, 0.34 } };
+	private String name = "Sierpinskilfs";
+	private double scale = 500;
+	private int height = 499;
+	private int width = 519;
+	private int xoffset = 439;
+	private int yoffset = 509;
+
+	/**
+	 * Viewer for IFS (Iterated Function System) using Inheritence . 20W CST8132
+	 * 
+	 * @author Abhi
+	 */
+	public String getName() {
+		return name;
+	}
+
+	public double[][] getAffine() {
+		return affine;
+	}
+
+	public double getScale() {
+		return scale;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getXoffset() {
+		return xoffset;
+	}
+
+	public int getYoffset() {
+		return yoffset;
+	}
+}

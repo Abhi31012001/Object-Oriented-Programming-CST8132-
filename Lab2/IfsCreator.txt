@@ -1,0 +1,49 @@
+
+import java.lang.Math;
+
+public class IfsCreator {
+
+	private static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5, Pro = 6;
+	double u = 0, row = 0, x = 0, y = 0, v = 0;
+
+	public int[][] generateIfs(AffineTransform affineIfs) {
+
+		int width = affineIfs.getWidth();
+		int height = affineIfs.getHeight();
+		int xoffset = affineIfs.getXoffset();
+		int yoffset = affineIfs.getYoffset();
+		double scale = affineIfs.getScale();
+		String name = affineIfs.getName();
+		double[][] affine = affineIfs.getAffine();
+		int[][] Figer1 = new int[width][height];
+		// double x=0;
+		// double y=0;
+		for (int i = 0; i < width * height * 70; i++) {
+
+			int n = 0;
+			for (int z = 0; z < affine.length; z++) {
+				double m = Math.random();
+				if (m < affine[z][6]) {
+					n = z;
+					break;
+				} else {
+					m = m - affine[z][6];
+				}
+			}
+
+			double u = affine[n][A] * x + affine[n][B] * y + affine[n][E];
+			double v = affine[n][C] * x + affine[n][D] * y + affine[n][F];
+			x = u;
+			y = v;
+
+			int xdisp = (int) (x * scale + xoffset);
+			int ydisp = (int) (y * scale + yoffset);
+
+			Figer1[ydisp][xdisp]++;
+
+		}
+		IfsViewer.view(Figer1);
+		return Figer1;
+	}
+
+}

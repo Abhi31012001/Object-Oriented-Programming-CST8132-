@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+/* Patel Abhi
+ * Student id 40978822
+ */
+public class Solid
+{
+
+	private String name;
+	private ArrayList<Facet> facets = new ArrayList<Facet>();
+
+	public Solid() {
+		name = null;
+	}
+
+	public Solid(String name) {
+		this.name = name;
+
+	}
+
+	public boolean addFacet(Facet facet) {
+
+		if (facets.add(facet))
+			return true;
+
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public String toString() {
+		String e = "EndSolid" + this.name + "\n";
+		System.out.println("Solid " + this.name);
+		facets.toString();
+		return e;
+	}
+
+}

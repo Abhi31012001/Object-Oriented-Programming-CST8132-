@@ -1,0 +1,57 @@
+import java.text.DecimalFormat;
+
+/* Patel Abhi
+ * Student id 40978822
+ */
+public class Vertex {
+
+	private double x, y, z;
+	static DecimalFormat df;
+
+	public Vertex(double x, double y, double z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		df = new DecimalFormat("#.##");
+	}
+
+	public static Vertex calcNormal(Vertex v1, Vertex v2, Vertex v3) {
+		double x1 = v1.x;
+		double y1 = v1.y;
+		double z1 = v1.z;
+
+		double x2 = v2.x;
+		double y2 = v2.y;
+		double z2 = v2.z;
+
+		double x3 = v3.x;
+		double y3 = v3.y;
+		double z3 = v3.z;
+
+		double a1 = x2 - x1;
+		double b1 = y2 - y1;
+		double c1 = z2 - z1;
+		double a2 = x3 - x1;
+		double b2 = y3 - y1;
+		double c2 = z3 - z1;
+
+		double a = b1 * c2 - b2 * c1;
+		double b = a2 * c1 - a1 * c2;
+		double c = a1 * b2 - b1 * a2;
+
+		// double d = (-a * x1 - b * y1 - c * z1);
+
+		double res = a * a + b * b + c * c;
+		double unit = Math.sqrt(res);
+
+		Vertex v = new Vertex(a / unit, b / unit, c / unit);
+		return v;
+
+	}
+
+	@Override
+	public String toString() {
+		return df.format(x) + df.format(y) + df.format(z);
+	}
+
+}

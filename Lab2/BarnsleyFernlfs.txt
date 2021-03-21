@@ -1,0 +1,40 @@
+
+public class BarnsleyFernlfs extends AffineTransform {
+	private double[][] affine = { { 0.00, 0.00, 0.00, 0.16, 0.00, 0.00, 0.01 },
+			{ 0.85, 0.04, -0.04, 0.85, 0.00, 1.60, 0.85 }, { 0.20, -0.26, 0.23, 0.22, 0.00, 1.60, 0.07 },
+			{ -0.15, 0.28, 0.26, 0.24, 0.00, 0.44, 0.07 } };
+	private String name = "Barnsley";
+	private double scale = 100;
+	private int height = 503;
+	private int width = 1019;
+	private int xoffset = 228;
+	private int yoffset = 10;
+
+	public String getName() {
+		return name;
+	}
+
+	public double[][] getAffine() {
+		return affine;
+	}
+
+	public double getScale() {
+		return scale;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getXoffset() {
+		return xoffset;
+	}
+
+	public int getYoffset() {
+		return yoffset;
+	}
+}

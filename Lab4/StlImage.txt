@@ -1,0 +1,25 @@
+
+public class StlImage {
+	 
+	double minThick;
+	double thickScale;
+	double scale;
+	double maxValue ;
+
+	public StlImage(double minThick, double maxValue ) {
+		
+	}
+	public Solid createSolid(int[][] matrix) {
+		//createSolid.createIfsVertex(x , y, value at (x,y));
+		//createSolid.createIfsVertex(x+1,y, value at (x+1,y+1));
+		//createSolid.createIfsVertex(x+1,y+1,value at (x+1,y+1));
+		//createSolid.createIfsVertex(x,y+1,value at (x,y+1));
+		//for 
+		//Vertex(0,0,0);
+		//Vertex(width*scale,0,0);
+		//vertex(width*scale,0,minThick);
+		//vertex(0,0,minthick);
+		
+	}
+	
+}
